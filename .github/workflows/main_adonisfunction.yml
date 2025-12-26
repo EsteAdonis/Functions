@@ -1,7 +1,7 @@
 # Docs for the Azure Web Apps Deploy action: https://github.com/azure/functions-action
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 
-name: Build and deploy dotnet core app to Azure Function App - adonisFunction
+name: Build and deploy dotnet core app to Azure Function App - adonisfunction
 
 on:
   push:
@@ -39,15 +39,15 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_F302FAD46B6D47D09F5C9BB3A15A0E00 }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_2CCD4F1893CD4D0FA3EF3F5F2190C196 }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_0218DA64039C401EAB13187D552CDC62 }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_83B19E736FA241A695E07B2749519C7B }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_E55CADECAABE4C49B413486205F19B56 }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_CA6F9949CADB4526B3E5B36095E9B198 }}
 
       - name: 'Run Azure Functions Action'
         uses: Azure/functions-action@v1
         id: fa
         with:
-          app-name: 'adonisFunction'
+          app-name: 'adonisfunction'
           slot-name: 'Production'
           package: '${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}/output'
           
